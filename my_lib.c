@@ -34,3 +34,20 @@ int my_strcmp(const char *str1 , const char *str2){
   }
   return (int)(*str1 - *str2);
 }
+
+/**
+ * Copies the string from src inside the memory pointed by dest
+ *
+ *@param dest: Pointer to the destination where the string will be copied.
+ *@param src:  Pointer to the source string to be copied.
+ *@return the pointer to the first character of dest.
+ */
+
+char *my_strcpy(char *dest, const char *src){
+  char *origin_dest = dest;
+  while(*src){
+    *dest++ = *src++;
+  }
+  *dest = '\0';
+  return origin_dest;
+}

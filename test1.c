@@ -66,7 +66,7 @@ int test_strcmp(char *strs[], int n) {
     return 0;
 }
 
-/*int test_strcpy(char **strs, int n) {
+int test_strcpy(char **strs, int n) {
     int i;
     char src[1024];
     char dest1[1024];
@@ -96,7 +96,7 @@ int test_strcmp(char *strs[], int n) {
 
     green();printf("\n%s passed :-)\n", __func__);
     return 0;
-}*/
+}
 
 /*int test_strncpy(char *dest, char *src, int num_test) {
 
@@ -199,8 +199,8 @@ int main() {
 
     test_strlen(strs, n);
     test_strcmp(strs, n);
-    /*test_strcpy(strs, n);
-    test_strncpy(strs[0], strs[1], 1);
+    test_strcpy(strs, n);
+    /*test_strncpy(strs[0], strs[1], 1);
     test_strncpy(strs[1], strs[0], 2);
     test_strcat(strs, n);
     test_strchr(strs, n,'m');
