@@ -163,7 +163,7 @@ int test_strcat(char **strs, int n) {
     return 0;
 }
 
-/*int test_strchr(char **strs, int n, char c) {
+int test_strchr(char **strs, int n, char c) {
     int i;
     char str1[1024];
     char str2[1024];
@@ -190,11 +190,11 @@ int test_strcat(char **strs, int n) {
     green();printf("\n%s passed :-)\n", __func__);
 
     return 0;
-}*/
+}
 
 int main() {
-    const int n = 4;
-    char *strs[4] = {"", "programa", "compilador", "depurador"};
+    const int n = 5;
+    char *strs[5] = {"", "programa", "compilador", "depurador", "boludo"};
 
 
     test_strlen(strs, n);
@@ -209,7 +209,7 @@ int main() {
         }
     }
     test_strcat(strs, n);
-    /*test_strchr(strs, n,'m');
-*/
+    test_strchr(strs, n,'m');
+    test_strchr(strs,n, 'o');
     return 0; // To avoid warning in -Wall
 }

@@ -99,3 +99,19 @@ char *my_strcat(char *dest, char const *src){
 
   return origin_dest;
 }
+
+/*
+ * Move the pointer character to character until to find the first chataracter like c into str
+ *
+ * @param str: Pointer to the string in which we search the character 'c'
+ * @param c: Character in code ASCII to find.
+ * return: the pointer to the first character 'c' in the string or null if not found;
+ */
+char *my_strchr(const char *str, int c){
+  while(*str++){
+    if(*str == (char)c){
+      return (char*)str;
+    }
+  }
+  return NULL;
+}
