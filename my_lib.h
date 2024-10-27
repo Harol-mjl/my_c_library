@@ -22,23 +22,22 @@ char *my_strchr(const char *s, int c);
 // char *my_strncat(char *dest, const char *src, size_t n);
 
 //structuras para gestor de pila
-/*
-struct my_stack_node {      // nodo de la pila (elemento)
+/*struct my_stack_node {      // nodo de la pila (elemento)
     void *data;
     struct my_stack_node *next;
-};
+};*/
 
-struct my_stack {   // pila
+/*struct my_stack {   // pila
     int size;       // tamaño de data, nos lo pasarán por parámetro
     struct my_stack_node *top;  // apunta al nodo de la parte superior
-};  
+};*/  
 
 //declaraciones funciones gestor de pila
-struct my_stack *my_stack_init(int size);
-int my_stack_push(struct my_stack *stack, void *data);
-void *my_stack_pop(struct my_stack *stack);
-int my_stack_len(struct my_stack *stack);
-int my_stack_purge(struct my_stack *stack); 
-struct my_stack *my_stack_read(char *filename);
-int my_stack_write(struct my_stack *stack, char *filename);
-*/
+//struct my_stack *my_stack_init(int size);
+//int my_stack_push(struct my_stack *stack, void *data);
+//void *my_stack_pop(struct my_stack *stack);
+//int my_stack_len(struct my_stack *stack);
+//int my_stack_purge(struct my_stack *stack); 
+//struct my_stack *my_stack_read(char *filename);
+//int my_stack_write(struct my_stack *stack, char *filename);
+    

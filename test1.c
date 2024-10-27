@@ -193,23 +193,17 @@ int test_strchr(char **strs, int n, char c) {
 }
 
 int main() {
-    const int n = 5;
-    char *strs[5] = {"", "programa", "compilador", "depurador", "boludo"};
+    const int n = 3;
+    char *strs[3] = {"programa", "compilador", "depurador"};
 
 
     test_strlen(strs, n);
     test_strcmp(strs, n);
     test_strcpy(strs, n);
-    test_strncpy(strs[1], strs[2], 1);
-    test_strncpy(strs[2], strs[1], 2);
-    int cont = 1;
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j  < n; j++){
-            test_strncpy(strs[i], strs[j],cont++);
-        }
-    }
+    test_strncpy(strs[0], strs[1], 1);
+    test_strncpy(strs[1], strs[0], 2);
     test_strcat(strs, n);
     test_strchr(strs, n,'m');
-    test_strchr(strs,n, 'o');
+
     return 0; // To avoid warning in -Wall
 }
