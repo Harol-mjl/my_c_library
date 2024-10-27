@@ -45,9 +45,26 @@ int my_strcmp(const char *str1 , const char *str2){
 
 char *my_strcpy(char *dest, const char *src){
   char *origin_dest = dest;
+  
   while(*src){
     *dest++ = *src++;
   }
   *dest = '\0';
+  return origin_dest;
+}
+
+char *my_strncpy(char *dest, const char *src, size_t n){
+  char *origin_dest = dest;
+  int contador = 0;
+  
+  if (n > strlen(src)){
+    memset(dest, 0, n);
+  }
+  
+  while(*src && contador < n){
+    *dest++ = *src++;
+    contador++;
+  }
+
   return origin_dest;
 }
