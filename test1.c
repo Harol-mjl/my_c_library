@@ -132,7 +132,7 @@ int test_strncpy(char *dest, char *src, int num_test) {
     return 0;
 }
 
-/*int test_strcat(char **strs, int n) {
+int test_strcat(char **strs, int n) {
     int i;
     char dest1[1024];
     char dest2[1024];
@@ -161,7 +161,7 @@ int test_strncpy(char *dest, char *src, int num_test) {
     green();printf("\n%s passed :-)\n", __func__);
 
     return 0;
-}*/
+}
 
 /*int test_strchr(char **strs, int n, char c) {
     int i;
@@ -208,8 +208,8 @@ int main() {
             test_strncpy(strs[i], strs[j],cont++);
         }
     }
-    /*test_strcat(strs, n);
-    test_strchr(strs, n,'m');
+    test_strcat(strs, n);
+    /*test_strchr(strs, n,'m');
 */
     return 0; // To avoid warning in -Wall
 }

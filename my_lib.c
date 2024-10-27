@@ -53,6 +53,15 @@ char *my_strcpy(char *dest, const char *src){
   return origin_dest;
 }
 
+/*
+ * Replaces the characters in 'dest' with the 'n' characters from 'src'
+ * if 'n' is greater than 'strlen(src), the remaining character in 'dest' will be set to 0's
+ *
+ * @param dest: Pointer to the destination where the characters from 'src' will be copied
+ * @param src: Pointer to the source string to copy
+ * @param m: the number of characters to copy form 'src' to 'dest,
+ *
+ */
 char *my_strncpy(char *dest, const char *src, size_t n){
   char *origin_dest = dest;
   int contador = 0;
@@ -65,6 +74,28 @@ char *my_strncpy(char *dest, const char *src, size_t n){
     *dest++ = *src++;
     contador++;
   }
+
+  return origin_dest;
+}
+
+/*
+ * Copies te string from i'src' to the end of the string 'dest' overwriting the null character of 'dest'.
+ * @param dest: Pointer to the destination where the 'src' string will be concatenated to'dest'
+ * @param src: Pinter to the string to the concatenated with 'dest'
+ * @return: the first position of 'dest' saved in 'origin_dest'
+ */
+
+char *my_strcat(char *dest, char const *src){
+  char *origin_dest = dest;
+  //Move the pointer "dest" until the null character   
+  while(*dest){
+    dest++;
+  }
+  while(*src){
+    *dest++ = *src++; 
+  }
+  //add the character null at the final of the concatenated string
+  *dest = '\0';
 
   return origin_dest;
 }
