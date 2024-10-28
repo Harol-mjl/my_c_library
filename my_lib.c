@@ -114,4 +114,27 @@ char *my_strchr(const char *str, int c){
     }
   }
   return NULL;
+};
+/*
+struct my_stack_node {
+  void *data;
+  struct my_stack_node *next;
+};
+
+struct my_stack {
+  int size;
+  struct my_stack_node *top;
 }
+*/
+struct my_stack *my_stack_init(int size){
+  if(size < 1){
+    return NULL;
+  }
+  struct my_stack *aux_stack = malloc(sizeof(struct my_stack));
+
+  aux_stack -> top = NULL;
+  aux_stack -> size = size;
+  
+  return aux_stack;
+}
+
